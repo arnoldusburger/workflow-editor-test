@@ -1,0 +1,119 @@
+{
+	"code": "wf_test",
+	"jobs": [{
+		"name": "init6",
+		"type": "stored_function",
+		"input": {},
+		"short": "",
+		"output": {},
+		"next_job": "Choose DR",
+		"documentation": {
+			"note": "init6 note text",
+			"short": "init6 short text",
+			"ignore": false,
+			"transitions": [{
+				"name": "Choose DR",
+				"note": "Transition text"
+			}],
+			"diagram_type": "initial"
+		},
+		"output_to_result": false
+	}, {
+		"name": "Choose DR",
+		"type": "gps_ws_call_v2",
+		"input": {},
+		"short": "",
+		"output": {},
+		"next_job": "Test 3",
+		"documentation": {
+			"note": "test2",
+			"short": "test2",
+			"ignore": false,
+			"transitions": [{
+				"name": "Test 3",
+				"note": ""
+			}],
+			"diagram_type": "regular"
+		},
+		"output_to_result": false
+	}, {
+		"name": "Test 3",
+		"type": "stored_function_json",
+		"input": {},
+		"short": "",
+		"output": {},
+		"next_job": "choice1",
+		"documentation": {
+			"note": "test3 note",
+			"short": "test3 short",
+			"ignore": false,
+			"transitions": [{
+				"name": "choice1",
+				"note": ""
+			}, {
+				"name": "choice2",
+				"note": ""
+			}, {
+				"name": "final",
+				"note": ""
+			}],
+			"diagram_type": "choice"
+		},
+		"output_to_result": false
+	}, {
+		"name": "choice1",
+		"type": "gps_ws_call_v2",
+		"input": {},
+		"short": "",
+		"output": {},
+		"next_job": "final",
+		"documentation": {
+			"note": "choice1 note",
+			"short": "choice1 short",
+			"ignore": false,
+			"transitions": [{
+				"name": "final",
+				"note": ""
+			}],
+			"diagram_type": "regular"
+		},
+		"output_to_result": false
+	}, {
+		"name": "choice2",
+		"type": "simple_test",
+		"input": {},
+		"short": "",
+		"output": {},
+		"next_job": "final",
+		"documentation": {
+			"note": "choice2 note",
+			"short": "choice2 short",
+			"ignore": false,
+			"transitions": [{
+				"name": "final",
+				"note": ""
+			}],
+			"diagram_type": "regular"
+		},
+		"output_to_result": false
+	}, {
+		"name": "final",
+		"type": "stored_function",
+		"input": {},
+		"short": "",
+		"output": {},
+		"next_job": "",
+		"documentation": {
+			"note": "final note",
+			"short": "final short",
+			"ignore": false,
+			"transitions": [],
+			"diagram_type": "final"
+		},
+		"output_to_result": false
+	}],
+	"payload": {},
+	"job_name": "",
+	"entity_type": "just testing 3",
+	"config_label": "Test"
+}
